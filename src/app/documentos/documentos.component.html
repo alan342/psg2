@@ -1,0 +1,7 @@
+<h1>Mis Documentos favoritos</h1>
+<form (ngSubmit)="guardarDocumento(f)" #f="ngForm">
+  <input type="text" name="nombreDocumento" ngModel required>
+  <button type="submit">Agregar Documento</button>
+</form>
+<app-documento (documentoClicked)="eliminarDocumento(documento)"
+*ngFor="let documento of documentos" [tituloDocumento]="documento"></app-documento>
